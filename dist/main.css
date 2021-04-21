@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+body{
+    background: black;
+
+}
+.hide-item{
+    display: none !important;
+}
+.main
+{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.main .title h1,
+.main .background-message
+{
+    color: #15ff00;
+}
+.hacking-percentage h1
+{
+    color: white;
+    background: #042c00;
+    width: 100%;
+    padding: .5rem 0;
+
+}
+.main .background-message {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    /* z-index: -1; */
+    background: rgba(0, 0, 0, .45);
+    user-select: none;
+    padding: 1rem;
+}
+.hacking-percentage .hacking{
+    margin-top:auto;
+}
+.hacking-bar
+{
+    position: relative;
+    width: 90%;
+    height: 1rem;
+    border-radius: 100rem;
+    background: #042c00;
+    margin: .5rem auto auto auto;
+    overflow: hidden;
+}
+
+.hacking-bar::before{
+    content: '';
+    transition: all .25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #345c30;
+    width: 0;
+    height: 100%;
+    animation: hacking 100s;
+}
+
+
+.hacking-percentage
+{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 25rem;
+    height: 20rem;
+    background: #15ff00;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .5rem;
+    text-align: center;
+    overflow: hidden
+}
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 90%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    /* The width is the width of the web page */
+}
+
+@keyframes hacking {
+    from{
+        width: 0%
+    }
+    to{
+        width: 100%
+    }
+}
